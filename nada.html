@@ -1,0 +1,192 @@
+﻿<!doctype html>
+<html>
+<head>
+<style type="text/css">
+
+body {
+	margin:0;
+}
+
+#daora {
+	background:url(imagem5.jpg);
+	background-repeat:no-repeat;
+	padding:20px;
+	margin-top:30px;
+	height:800px;	
+}
+
+#noticias {
+		background-image: url(imagem4.jpg);
+    	-webkit-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-moz-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-ms-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-o-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);	
+}
+
+#espaco_noticias {
+	margin-top:22px;
+}
+
+
+
+#sobre {
+	background:url(imagem3.jpg);
+	-webkit-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-moz-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-ms-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-o-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+}
+h2 {
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#F8EFEF;
+	font-size:36px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+ /* --------------------------------------------------------------------------------*/
+ 
+ 
+
+    * {margin:0; padding: 0;}
+    html, body {height:100%;}
+     
+    /** formata elementos que tem backgrounds parallax **/
+    .bgParallax {
+    	font-family: 'Elsie', cursive;
+    	color:#FFF;
+    	margin: 0 auto;
+    	width: 100%;
+    	max-width: 1920px;
+    	position: relative;
+    	min-height: 100%;
+    	text-shadow:0 0 10px rgba(0,0,0,0.7);
+     
+    	background-position: 50% 0;
+    	background-repeat: repeat;
+    	background-attachment: fixed;
+    }
+     
+    /* Define backgrounds dos divs */
+    #contato {
+		background-image: url(imagem2.jpg);
+	}
+    #missao {
+    	background-image: url(imagem.jpg);
+    	-webkit-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-moz-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-ms-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	-o-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    	box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+    }
+     
+    /** Formata o article que vai o texto **/
+    .bgParallax article {
+      width: 70%;
+      text-align: center;
+      margin:0 auto;
+      padding:20% 0 0;
+    }
+     
+    /** formata texto **/
+    article h1 {font-size:40px;}
+    article p {line-height: 30px; font-size:20px; margin-top:15px;}
+    article p a {color:#FFF; text-decoration:none; font-size:30px;}
+     
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Noticias</a></li>
+  <li><a href="#contact">Contato</a></li>
+  <li><a href="#about">Sobre</a></li>
+</ul>
+ <a name="home"></a>
+<div id="daora">
+
+
+<center> <h2>HOME</h2> </center>
+
+</div>
+ <a name="news"></a>
+<div id="noticias" class="bgParallax" data-speed="15">
+         <article>
+         	<h1>NOTÍCIAS</h1>
+         <p>----------------------------------------------------------------------------------------------------- </p>
+         </article>
+    
+  <div id="espaco_noticias"> 
+ 
+	<hr> <center> <h2> VEM COM O MOSTRÃO PORRA </h2> </center> <hr> 
+ </div>
+</div>
+ 
+ <a name="contact"></a>
+<div id="contato" class="bgParallax" data-speed="15">
+	<article>
+    <center> <h2> CONTATO </h2> </center>
+    <p> --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- </p>
+    
+     <p> --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- </p>
+     
+      <p> --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- </p>
+      
+       <p> --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- </p>
+	</article>
+</div>
+
+  <a name="about"></a>  
+<div id="sobre" class="bgParallax" data-speed="10">
+         <article>
+         	<h1>SOBRE</h1>
+         <p>----------------------------------------------------------------------------------------------------- </p>
+         </article>
+    </div>
+    
+    <script>
+			    $('div.bgParallax').each(function(){
+    	var $obj = $(this);
+     
+    	$(window).scroll(function() {
+    		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+     
+    		var bgpos = '50% '+ yPos + 'px';
+     
+    		$obj.css('background-position', bgpos );
+     
+    	}); 
+    });
+	</script>
+</body>
+</html>
